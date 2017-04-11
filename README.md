@@ -12,5 +12,15 @@ get up and running quickly.
 
 ## Usage
 
-1. Clone the repository
-2. run ansible commands from within the clone directory
+1. Clone the repository, eg.
+
+   ```
+   git clone https://github.com/jschulthess/ansible-scaffold
+   ```
+
+2. run ansible commands from within the clone directory, eg.
+
+   ```
+   cd ansible-scaffold
+   ansible-playbook pb-hello.yml
+   ```

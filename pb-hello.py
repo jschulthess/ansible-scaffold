@@ -1,0 +1,9 @@
+---
+- hosts: local
+  tasks:
+    - name: task1
+      shell: echo "Hello from {{ ansible_user_id }} @ {{ ansible_fqdn }}"
+      register: my_action
+    - name: debug message
+      debug:
+        msg: "{{ my_action.stdout }}"

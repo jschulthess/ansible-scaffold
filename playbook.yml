@@ -1,9 +1,0 @@
----
-- hosts: local
-  become: True
-  tasks:
-    - name: task1
-      shell: echo "Hello world"
-      register: my_action
-    - debug:
-        msg: "{{ my_action.stdout }}"
