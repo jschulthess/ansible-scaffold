@@ -24,3 +24,10 @@ get up and running quickly.
    cd ansible-scaffold
    ansible-playbook pb-hello.yml
    ```
+
+Note: In case you add more hosts to the inventory Ansible can easily be limited
+      to a host or host group using the -l switch.
+
+      ```
+      ansible-playbook -l local pb-hello.yml
+      ```

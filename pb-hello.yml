@@ -1,5 +1,5 @@
 ---
-- hosts: local
+- hosts: all
   tasks:
     - name: task1
       shell: echo "Hello from {{ ansible_user_id }} @ {{ ansible_fqdn }}"
