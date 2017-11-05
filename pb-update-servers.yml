@@ -1,0 +1,33 @@
+---
+# Upgrade systems
+- hosts: all
+  tasks:
+    #- name: Upgrade Redhat server systems
+    #  yum:
+    #    name: "*"
+    #    state: 'latest'
+    #  when: ansible_distribution == 'CentOs' or ansible_distribution == 'RHEL' or
+    #
+    #- name: Upgrade Fedora systems
+    #  dnf:
+    #    name: "*"
+    #    state: 'latest'
+    #  when: ansible_distribution == 'Fedora'
+    #
+    #- name: Upgrade Debian systems
+    #  apt:
+    #    name: "*"
+    #    state: 'latest'
+    #  when: ansible_distribution == 'Debian'
+    #
+    #- name: Upgrade Debian systems
+    #  apt:
+    #    name: "*"
+    #    state: 'latest'
+    #  when: ansible_distribution == 'Debian'
+    
+    - name: Upgrade system
+      package:
+        name: "*"
+        state: 'latest'
+      when: ansible_distribution == 'Debian'
