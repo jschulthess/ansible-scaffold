@@ -2,6 +2,11 @@
 # Upgrade systems
 - hosts: all
   tasks:
+    - name: Upgrade system
+      package:
+        name: "*"
+        state: 'latest'
+
     #- name: Upgrade Redhat server systems
     #  yum:
     #    name: "*"
@@ -25,9 +30,3 @@
     #    name: "*"
     #    state: 'latest'
     #  when: ansible_distribution == 'Debian'
-    
-    - name: Upgrade system
-      package:
-        name: "*"
-        state: 'latest'
-      when: ansible_distribution == 'Debian'
